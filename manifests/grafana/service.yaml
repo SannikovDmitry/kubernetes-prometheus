@@ -9,7 +9,9 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 3000
+    - port: 80
+      targetPort: 3000
+      protocol: TCP
   selector:
     app: grafana
     component: core
